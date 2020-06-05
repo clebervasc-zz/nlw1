@@ -1,0 +1,112 @@
+@import 'reset';
+@import 'variables';
+
+#page-create-point {
+  width: 90%;
+  max-width: 68.75rem;
+  margin: 0 auto;
+
+  header {
+    margin-top: 2.813rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    a {
+      display: flex;
+      align-items: center;
+      color: $title-color;
+      font-weight: 700;
+
+      @media (max-width: 900px) {
+        position: absolute;
+        bottom: 3rem;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      span {
+        margin-right: .9375rem;
+        display: flex;
+        background-image: url('../images/icons/arrow-left.svg');
+        width: 1.25rem;
+        height: 1.5rem;
+      }
+    }
+  }
+
+  form {
+    width: 100%;
+    max-width: 45rem;
+    background: white;
+    padding: 4.063rem;
+    border-radius: .5rem;
+    margin: 5rem auto;
+
+    h1 {
+      font-size: 2.25rem;
+    }
+
+    fieldset {
+      margin-top: 4rem;
+      
+      legend {
+        h2 {
+          font-size: 1.5rem;
+          margin-bottom: 1.5rem;
+        }
+      }
+
+      .field-group {
+        display: flex;
+
+        .field + .field {
+          margin-left: 1.5rem;
+        }
+      }
+
+      .field {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 1.5rem;
+        flex: 1;
+
+        label {
+          font-size: .875rem;
+          margin-bottom: .5rem;
+        }
+
+        input, select {
+          background: #f0f0f5;
+          padding: 1rem 1.5rem;
+          font-size: 1rem;
+          outline: none;
+          border-radius: .5rem;
+        }
+  
+        select {
+          @include appearance;
+          cursor: pointer;
+        }
+      }
+    }
+
+    button {
+      width: 100%;
+      max-width: 16.25rem;
+      height: 3.438rem;
+      background: $primary-color;
+      border-radius: .5rem;
+      color: white;
+      font-weight: 700;
+      margin-top: 2.5rem;
+      font-size: 1rem;
+      transition: background-color 400ms;
+
+      &:hover {
+        background-color: #2fb86e;
+        cursor: pointer;
+      }
+    }
+  }
+}

@@ -11,6 +11,9 @@ body {
   border: 0;
   margin: 0;
   padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 16px;
 }
 
 a {
@@ -41,7 +44,7 @@ h1, h2, h3, h4, h5, h6 {
 
 #page-home .content {
   width: 90%;
-  max-width: 1100px;
+  max-width: 68.75rem;
   margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -63,7 +66,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #page-home header {
-  margin-top: 45px;
+  margin-top: 2.8125rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -86,7 +89,7 @@ h1, h2, h3, h4, h5, h6 {
 @media (max-width: 900px) {
   #page-home header a {
     position: absolute;
-    bottom: 48px;
+    bottom: 3rem;
     left: 50%;
     -webkit-transform: translateX(-50%);
             transform: translateX(-50%);
@@ -94,17 +97,17 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #page-home header a span {
-  margin-right: 15px;
+  margin-right: .9375rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   background-image: url("../images/icons/log-in.svg");
-  width: 20px;
-  height: 20px;
+  width: 1.25rem;
+  height: 1.25rem;
 }
 
 #page-home main {
-  max-width: 560px;
+  max-width: 35rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -129,23 +132,23 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #page-home main h1 {
-  font-size: 55px;
+  font-size: 3.4375rem;
   color: #322153;
 }
 
 #page-home main p {
   color: #322153;
-  font-size: 24px;
-  margin-top: 24px;
-  line-height: 38px;
+  font-size: 1.5rem;
+  margin-top: 1.5rem;
+  line-height: 2.375rem;
 }
 
 #page-home main a {
   width: 100%;
-  max-width: 360px;
-  height: 72px;
-  border-radius: 8px;
-  margin-top: 40px;
+  max-width: 22.5rem;
+  height: 4.5rem;
+  border-radius: .5rem;
+  margin-top: 2.5rem;
   background-color: #34cb79;
   -webkit-transition: 400ms;
   transition: 400ms;
@@ -162,10 +165,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #page-home main a span {
-  border-top-left-radius: 8px;
-  border-bottom-left-radius: 8px;
-  width: 72px;
-  height: 72px;
+  border-top-left-radius: .5rem;
+  border-bottom-left-radius: .5rem;
+  width: 4.5rem;
+  height: 4.5rem;
   background: rgba(0, 0, 0, 0.08);
   display: -webkit-box;
   display: -ms-flexbox;
@@ -181,8 +184,8 @@ h1, h2, h3, h4, h5, h6 {
 #page-home main a span::after {
   content: '';
   background-image: url("../images/icons/search.svg");
-  width: 20px;
-  height: 20px;
+  width: 1.25rem;
+  height: 1.25rem;
 }
 
 #page-home main a strong {

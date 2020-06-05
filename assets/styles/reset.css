@@ -1,0 +1,26 @@
+html {
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  background-color: #f0f0f5;
+  -webkit-font-smothing: antialiased;
+}
+
+* {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 16px;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Ubuntu', sans-serif;
+}
+/*# sourceMappingURL=reset.css.map */

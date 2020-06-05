@@ -1,0 +1,161 @@
+html {
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  background-color: #f0f0f5;
+  -webkit-font-smothing: antialiased;
+}
+
+* {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 16px;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Ubuntu', sans-serif;
+}
+
+#page-create-point {
+  width: 90%;
+  max-width: 68.75rem;
+  margin: 0 auto;
+}
+
+#page-create-point header {
+  margin-top: 2.813rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#page-create-point header a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #322153;
+  font-weight: 700;
+}
+
+@media (max-width: 900px) {
+  #page-create-point header a {
+    position: absolute;
+    bottom: 3rem;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+}
+
+#page-create-point header a span {
+  margin-right: .9375rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-image: url("../images/icons/arrow-left.svg");
+  width: 1.25rem;
+  height: 1.5rem;
+}
+
+#page-create-point form {
+  width: 100%;
+  max-width: 45rem;
+  background: white;
+  padding: 4.063rem;
+  border-radius: .5rem;
+  margin: 5rem auto;
+}
+
+#page-create-point form h1 {
+  font-size: 2.25rem;
+}
+
+#page-create-point form fieldset {
+  margin-top: 4rem;
+}
+
+#page-create-point form fieldset legend h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+#page-create-point form fieldset .field-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#page-create-point form fieldset .field-group .field + .field {
+  margin-left: 1.5rem;
+}
+
+#page-create-point form fieldset .field {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 1.5rem;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+#page-create-point form fieldset .field label {
+  font-size: .875rem;
+  margin-bottom: .5rem;
+}
+
+#page-create-point form fieldset .field input, #page-create-point form fieldset .field select {
+  background: #f0f0f5;
+  padding: 1rem 1.5rem;
+  font-size: 1rem;
+  outline: none;
+  border-radius: .5rem;
+}
+
+#page-create-point form fieldset .field select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  cursor: pointer;
+}
+
+#page-create-point form button {
+  width: 100%;
+  max-width: 16.25rem;
+  height: 3.438rem;
+  background: #34cb79;
+  border-radius: .5rem;
+  color: white;
+  font-weight: 700;
+  margin-top: 2.5rem;
+  font-size: 1rem;
+  -webkit-transition: background-color 400ms;
+  transition: background-color 400ms;
+}
+
+#page-create-point form button:hover {
+  background-color: #2fb86e;
+  cursor: pointer;
+}
+/*# sourceMappingURL=create-point.css.map */
