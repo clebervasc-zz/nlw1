@@ -1,39 +1,64 @@
-function populateUfs () {
-  const ufSelect = document.querySelector("select[name=uf")
-  const urlSearchUf = 'https://servicodados.ibge.gov.br/api/v1/localidades/estados'
+// import functions
+import { populateUfs, getCities } from "./getLocation.js"
 
-  ferchLocation(urlSearchUf, ufSelect)
-}
+// get href
+const { location: { pathname } } = window
 
-function getCities (event) {
-  const { selectedIndex, options, value } = event.target
-
-  const idUf = value
-  const citySelect = document.querySelector("[name=city")
-  const stateInput = document.querySelector("[name=state")
-  const urlSearchCities = `https://servicodados.ibge.gov.br/api/v1/localidades/estados/${idUf}/municipios`
-  
-
-  ferchLocation(urlSearchCities, citySelect)
-    .then(() => {
-      stateInput.value = options[selectedIndex].text
-      citySelect.disabled = false
-    })
-}
-
-function ferchLocation (url, selector) {
-  return fetch(url)
-    .then((response) => response.json())
-    .then(payload => {
-      for(const response of payload) {
-        selector.innerHTML += `<option value=${response.id}>${response.nome}</option>`
-      }
-    })
-}
-
-// execute functions
-populateUfs()
+// execute functions of index
+if(pathname === '/') {
+  document
+  .querySelector(".search-point")
+  .addEventListener("click", () => {
+    document
+    .querySelector("#modal")
+    .classList.remove('hide')
+  });
 
 document
-  .querySelector("select[name=uf")
-  .addEventListener("change", getCities)
+  .querySelector(".close-search-point")
+  .addEventListener("click", () => {
+    document
+    .querySelector("#modal")
+    .classList.add('hide')
+  });
+}
+
+// execute functions of create-point
+if (pathname.includes('create-point')) {
+  // populate ufs
+  populateUfs();
+
+  // change on select uf
+  document
+    .querySelector("select[name=uf")
+    .addEventListener("change", getCities);
+
+  // set selected items
+  const itemsToCollect = document
+    .querySelectorAll(".items-grid li")
+
+  for (const item of itemsToCollect) {
+    item.addEventListener("click", handleSelectedItem);
+  }
+
+  const colectedItems = document.querySelector("input[name=items")
+
+  let selectedItems = []
+
+  function handleSelectedItem(event) {
+    const itemLi = event.target;
+    const { id } = itemLi.dataset;
+
+    itemLi.classList.toggle("selected")
+
+    const alreadySelected = selectedItems.findIndex(item => item === id)
+
+    if (alreadySelected >= 0) {
+      selectedItems = selectedItems.filter(item => item !== id)
+    } else {
+      selectedItems.push(id)
+    }
+
+    colectedItems.value = selectedItems.sort()
+  }
+}

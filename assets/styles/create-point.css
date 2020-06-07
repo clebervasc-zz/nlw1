@@ -24,14 +24,9 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Ubuntu', sans-serif;
 }
 
-#page-create-point {
-  width: 90%;
-  max-width: 68.75rem;
-  margin: 0 auto;
-}
-
-#page-create-point header {
+.repeat-header {
   margin-top: 2.813rem;
+  margin-bottom: 3rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -43,7 +38,7 @@ h1, h2, h3, h4, h5, h6 {
           justify-content: space-between;
 }
 
-#page-create-point header a {
+.repeat-header a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -55,7 +50,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @media (max-width: 900px) {
-  #page-create-point header a {
+  .repeat-header a {
     position: absolute;
     bottom: 3rem;
     left: 50%;
@@ -64,7 +59,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-#page-create-point header a span {
+.repeat-header a span {
   margin-right: .9375rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -72,6 +67,12 @@ h1, h2, h3, h4, h5, h6 {
   background-image: url("../images/icons/arrow-left.svg");
   width: 1.25rem;
   height: 1.5rem;
+}
+
+#page-create-point {
+  width: 90%;
+  max-width: 68.75rem;
+  margin: 0 auto;
 }
 
 #page-create-point form {
@@ -138,6 +139,61 @@ h1, h2, h3, h4, h5, h6 {
   -moz-appearance: none;
   appearance: none;
   cursor: pointer;
+}
+
+#page-create-point form fieldset .items-grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
+}
+
+#page-create-point form fieldset .items-grid li {
+  background: #f5f5f5;
+  list-style-type: none;
+  border: .125rem solid #f5f5f5;
+  border-radius: .5rem;
+  height: 11.25rem;
+  padding: 2rem 1.5rem 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  text-align: center;
+  cursor: pointer;
+}
+
+#page-create-point form fieldset .items-grid li.selected {
+  background: #e1faec;
+  border: 2px solid #34cb79;
+}
+
+#page-create-point form fieldset .items-grid li img, #page-create-point form fieldset .items-grid li span {
+  pointer-events: none;
+}
+
+#page-create-point form fieldset .items-grid li span {
+  margin-top: .75rem;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #322153;
 }
 
 #page-create-point form button {
