@@ -50,16 +50,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @media (max-width: 900px) {
-  .repeat-header a {
-    position: absolute;
-    bottom: 3rem;
-    left: 50%;
-    -webkit-transform: translateX(-50%);
-            transform: translateX(-50%);
+  .repeat-header a span.text {
+    display: none;
   }
 }
 
-.repeat-header a span {
+.repeat-header a span.icon {
   margin-right: .9375rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -86,15 +82,34 @@ h1, h2, h3, h4, h5, h6 {
 
 #page-create-point form h1 {
   font-size: 2.25rem;
+  color: #322153;
 }
 
 #page-create-point form fieldset {
   margin-top: 4rem;
 }
 
+#page-create-point form fieldset legend {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 1.5rem;
+}
+
 #page-create-point form fieldset legend h2 {
   font-size: 1.5rem;
-  margin-bottom: 1.5rem;
+}
+
+#page-create-point form fieldset legend span {
+  color: #322153;
+  font-size: 14px;
 }
 
 #page-create-point form fieldset .field-group {
@@ -103,8 +118,23 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
 }
 
+@media (max-width: 900px) {
+  #page-create-point form fieldset .field-group {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 #page-create-point form fieldset .field-group .field + .field {
   margin-left: 1.5rem;
+}
+
+@media (max-width: 900px) {
+  #page-create-point form fieldset .field-group .field + .field {
+    margin-left: 0;
+  }
 }
 
 #page-create-point form fieldset .field {

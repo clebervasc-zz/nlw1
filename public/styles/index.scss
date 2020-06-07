@@ -45,6 +45,12 @@
         transform: translateX(-50%);
       }
 
+      @media (max-width: 500px) {
+        width: 100%;
+        bottom: 1rem;
+        justify-content: center;
+      }
+
       span {
         margin-right: .9375rem;
         display: flex;
@@ -69,6 +75,9 @@
     h1 {
       font-size: 3.4375rem;
       color: $title-color;
+      @media (max-width: 500px) {
+        font-size: 2rem;
+      }
     }
 
     p {
@@ -76,6 +85,12 @@
       font-size: 1.5rem;
       margin-top: 1.5rem;
       line-height: 2.375rem;
+
+      @media (max-width: 500px) {
+        font-size: 2rem;
+        font-size: 1rem;
+        margin-top: .5rem;
+      }
     }
 
     a {

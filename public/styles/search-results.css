@@ -50,16 +50,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @media (max-width: 900px) {
-  .repeat-header a {
-    position: absolute;
-    bottom: 3rem;
-    left: 50%;
-    -webkit-transform: translateX(-50%);
-            transform: translateX(-50%);
+  .repeat-header a span.text {
+    display: none;
   }
 }
 
-.repeat-header a span {
+.repeat-header a span.icon {
   margin-right: .9375rem;
   display: -webkit-box;
   display: -ms-flexbox;

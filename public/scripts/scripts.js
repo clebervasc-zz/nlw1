@@ -5,7 +5,7 @@ import { populateUfs, getCities } from "./getLocation.js"
 const { location: { pathname } } = window
 
 // execute functions of index
-if(pathname === '/') {
+if(pathname === '/' || pathname.includes('index')) {
   document
   .querySelector(".search-point")
   .addEventListener("click", () => {

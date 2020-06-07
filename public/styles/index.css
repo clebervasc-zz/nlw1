@@ -96,6 +96,16 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+@media (max-width: 500px) {
+  #page-home header a {
+    width: 100%;
+    bottom: 1rem;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
 #page-home header a span {
   margin-right: .9375rem;
   display: -webkit-box;
@@ -136,11 +146,25 @@ h1, h2, h3, h4, h5, h6 {
   color: #322153;
 }
 
+@media (max-width: 500px) {
+  #page-home main h1 {
+    font-size: 2rem;
+  }
+}
+
 #page-home main p {
   color: #322153;
   font-size: 1.5rem;
   margin-top: 1.5rem;
   line-height: 2.375rem;
+}
+
+@media (max-width: 500px) {
+  #page-home main p {
+    font-size: 2rem;
+    font-size: 1rem;
+    margin-top: .5rem;
+  }
 }
 
 #page-home main a {

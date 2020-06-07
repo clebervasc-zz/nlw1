@@ -1,3 +1,5 @@
+@import 'variables';
+
 .repeat-header {
   margin-top: 2.813rem;
   margin-bottom: 3rem;
@@ -12,13 +14,10 @@
     font-weight: 700;
 
     @media (max-width: 900px) {
-      position: absolute;
-      bottom: 3rem;
-      left: 50%;
-      transform: translateX(-50%);
+      span.text { display: none; }
     }
 
-    span {
+    span.icon {
       margin-right: .9375rem;
       display: flex;
       background-image: url('../images/icons/arrow-left.svg');
