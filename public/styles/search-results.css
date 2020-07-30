@@ -65,21 +65,20 @@ h1, h2, h3, h4, h5, h6 {
   height: 1.5rem;
 }
 
-body:after {
+body {
+  background: white;
+}
+
+body::after {
   content: '';
-  position: fixed;
-  top: 260px;
+  position: absolute;
+  top: 0;
   right: 0;
   bottom: 0;
   left: 0;
-  background: white;
+  background: #f0f0f5;
   z-index: -1;
-}
-
-@media (max-width: 900px) {
-  body:after {
-    display: none;
-  }
+  height: 16rem;
 }
 
 #page-search-results {
@@ -111,6 +110,37 @@ body:after {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
   }
+}
+
+#page-search-results main .card {
+  position: relative;
+}
+
+#page-search-results main .card .exclude {
+  cursor: pointer;
+  float: right;
+  background: red;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: white;
+  position: absolute;
+  z-index: 1;
+  right: -.8125rem;
+  top: -1.0625rem;
+}
+
+#page-search-results main .card .exclude:hover {
+  background: #e60505;
 }
 
 #page-search-results main .card h1 {

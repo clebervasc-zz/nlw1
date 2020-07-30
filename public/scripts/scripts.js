@@ -62,3 +62,12 @@ if (pathname.includes('create-point')) {
     colectedItems.value = selectedItems.sort()
   }
 }
+
+// execute functions of search results
+if (pathname.includes('search')) {
+  const buttonDelete = document.querySelector(".exclude")
+  
+  buttonDelete && buttonDelete.addEventListener("click", () => {
+    window.location = `/search${window.location.search}&delete=${buttonDelete.getAttribute('data-id')}`
+  });
+}

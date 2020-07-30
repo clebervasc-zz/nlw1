@@ -3,19 +3,17 @@
 @import 'header';
 
 body {
-  &:after {
+  background: white;
+  &::after {
     content: '';
-    position: fixed;
-    top: 260px;
+    position: absolute;
+    top: 0;
     right: 0;
     bottom: 0;
     left: 0;
-    background: white;
+    background: $input-color;
     z-index: -1;
-
-    @media (max-width: 900px) {
-      display: none;
-    }
+    height: 16rem;
   }
 }
 
@@ -43,6 +41,27 @@ body {
     }
 
     .card {
+      position: relative;
+      .exclude {
+        cursor: pointer;
+        float: right;
+        background: red;
+        width: 2.5rem;
+        height: 2.5rem;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        position: absolute;
+        z-index: 1;
+        right: -.8125rem;
+        top: -1.0625rem;
+
+        &:hover {
+          background: #e60505;
+        }
+      }
       h1 {
         margin-top: 32px;
         font-size: 2.25rem;
