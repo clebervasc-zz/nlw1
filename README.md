@@ -1,5 +1,5 @@
 <h1 align="center">
-    <img alt="Next Level Week 1" title="Next Level Week 1" src="https://i.imgur.com/UM4JvBo.png" width="500px" />
+    <img alt="Next Level Week 1" title="Next Level Week 1" src="https://i.imgur.com/UM4JvBo.png" width="400px" />
 </h1>
 
 <h4 align="center"> 
@@ -20,7 +20,7 @@
   <a href="#-nlw">Next Level Week</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-projeto">Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#rocket-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#information_source-como-usar">How to use</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#information_source-como-usar">Como Usar</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#memo-licença">License</a>
 </p>
 
